@@ -1,55 +1,71 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Student Management</title>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Academic Oasis - Student Hub</title>
   <link rel="stylesheet" href="styles.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
-  <div>
 
-    <div>    
-      <h3>Add Student</h3>
-      <form id="addStudentForm">
-        <label for="addName">Name:</label>
-        <input type="text" id="addName" name="name">
-        <br>
-        <label for="email">Email:</label>
-        <input type="email" id="addEmail" name="email">
-        <br>
-        <button type="button" id="addStudentButton">Add Student</button>
-      </form>
+  <div class="academic-harmony">
+
+    <div class="student-section">    
+      <h2>Embark on the Academic Journey</h2>
+      <div class="student-form" id="addStudentForm">
+        <h3>Add New Scholar</h3>
+        <form>
+          <label for="addName">Name:</label>
+          <input type="text" id="addName" name="name">
+          <br>
+          <label for="email">Email:</label>
+          <input type="email" id="addEmail" name="email">
+          <br>
+          <button type="button" id="addStudentButton">Enroll Now</button>
+        </form>
       </div>
-      <div>
-      <h3>Update Student</h3>
-      <form id="updateStudentForm">
-        <label for="studentID">ID:</label>
-        <input type="number" id="id" name="id">
-        <br>
-        <label for="name">Name:</label>
-        <input type="text" id="updateName" name="name">
-        <br>
-        <label for="email">Email:</label>
-        <input type="email" id="updateEmail" name="email">
-        <br>
-        <button type="button" id="updateStudentButton">Update Student</button>
-      </form>
+    </div>
+
+    <div class="student-section">
+      <h2>Update Academic Profile</h2>
+      <div class="student-form" id="updateStudentForm">
+        <h3>Alter Scholar Information</h3>
+        <form>
+          <label for="studentID">ID:</label>
+          <input type="number" id="id" name="id">
+          <br>
+          <label for="name">Name:</label>
+          <input type="text" id="updateName" name="name">
+          <br>
+          <label for="email">Email:</label>
+          <input type="email" id="updateEmail" name="email">
+          <br>
+          <button type="button" id="updateStudentButton">Revise Details</button>
+        </form>
       </div>
-      <div>
-      <h3>Delete Student</h3>
-      <form id="deleteStudentForm">
-        <label for="name">Name:</label>
-        <input type="text" id="deleteName" name="name">
-        <br>
-        <button type="button" id="deleteStudentButton">Delete Student</button>
-      </form>
+    </div>
+
+    <div class="student-section">
+      <h2>Farewell to Scholars</h2>
+      <div class="student-form" id="deleteStudentForm">
+        <h3>Withdraw a Scholar</h3>
+        <form>
+          <label for="name">Name:</label>
+          <input type="text" id="deleteName" name="name">
+          <br>
+          <button type="button" id="deleteStudentButton">Bid Farewell</button>
+        </form>
       </div>
-    
-      <div>
-      <h3>Student List</h3>
+    </div>
+
+    <div class="student-section">
+      <h2>Academic Roster</h2>
       <h4> Student ID | Student Name | Student Email</h4>
       <ul id="studentList"></ul>
-    
+    </div>
+
+  </div> 
       <script>
         $(document).ready(function() {
           // Get all students
